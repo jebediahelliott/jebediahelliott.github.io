@@ -1,0 +1,11 @@
+---
+layout: post
+title:      "Adding JavaScript to Rails"
+date:       2018-11-28 01:30:08 +0000
+permalink:  adding_javascript_to_rails
+---
+
+
+I have to admit that soon after I started this project I began to feel like I was adding JavaScript for no other reason than to add JavaScript and wasn't really enjoying it. Talk about a bad first impression. Once I got some of the functionality up and running it didn't take long to see the benefits of speed and flexibility. Adding JavaScript to Rails is about as easy as it gets thanks to Rails having it baked right in. You just go to your assets directory and there's the javascripts folder, nicely organized and waiting to be filled with code. My first stumbling block, and probably why I got the aforementioned bad impression, came from all the HTML I was writing inside my JavaScript files. I realized later on that just simply grabbing the existing HTML files and using their content would have probably been the way to go but I had it in my head that that would be bad practice for some reason. Even so, thanks to template literals, writing the HTML in my js files was not too painful. The next stumbling block was all about the learning curve, and the only cure for that is more cowbell so it was off the docs every other line for a little while. That brings us to the ES6 class constructors.
+
+The class contructors are quite nice and it was immediately clear how they are especially helpful to someone used to working with classes i.e. myself. They are so nice in fact that they fooled me into thinking they possess the power and functionality that I had gotten used to in Rails. I was disabused of that notion as soon as I tried to pull in an object with lots of attributes to set and wanted to get it's associations. As far as I have been able to find, the JavaScript classes lack some of the bells and whistles that you find in Ruby or Rails, like mass assignment or setting up associations. Bells and whistles aside, it still works well and I was able to build the association into the class that needed it. All in all, this first project with Javascript turned out to be a lot of fun. I taught me a great deal about how the language works and the benefits it can provide.
