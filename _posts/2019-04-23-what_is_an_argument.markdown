@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "What is an Argument"
-date:       2019-04-23 13:12:53 +0000
+date:       2019-04-23 09:12:54 -0400
 permalink:  what_is_an_argument
 ---
 
 
-When you first start out on your journey to learn to code, there are many different challenges that you will face and new concepts to learn. One thing that many folks struggle with in the beginning is what an argument is and how it is used in a function. An argument is a piece of information that is given to a function, which it then uses to perform some operation. When we write a function that accepts an argument, we don't know what information that argument wil contain, only that it will be of a specific type(array, string, etc.). I think this is the crux of what people struggle with when first working with arguments. I often see code like the following: 
+When you first start out on your journey to learn to code, there are many different challenges that you will face and new concepts to learn. One thing that many folks struggle with in the beginning is what an argument is and how it is used in a function. An argument is a piece of information that is given to a function, which it then uses to perform some operation. When we write a function that accepts an argument, we don't know what information that argument will contain, only that it will be of a specific type(array, string, etc.). I think this is the crux of what people struggle with when first working with arguments. I often see code like the following: 
 
 ```
 function removeLastElementFromArray(array) {   //array is the argument to our function
