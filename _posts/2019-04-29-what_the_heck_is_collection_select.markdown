@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "What the Heck is Collection Select?"
-date:       2019-04-29 20:31:50 +0000
+date:       2019-04-29 16:31:51 -0400
 permalink:  what_the_heck_is_collection_select
 ---
 
 
-As I'm sure you have guessed, `collection_select` has to do with making a selction. More specifically, it is a Ruby on Rails form helper that allows you to display a collection of things in a dropdown and allow your user to, you guessed it, select one of them. As simple as the concept is, the implementation and usage can be rather unclear. The [official docs](https://api.rubyonrails.org/classes/ActionView/Helpers/FormOptionsHelper.html#method-i-collection_select) are, at least to me, a little bit cryptic. Much like one of Nostradamus' predictions, they only make perfect sense after you already know what's going on. I think one of the reasons(I would postit it is the primary reason) for confusion around the usage of `collection_select` is because it can take as many as 7 arguments. That's not a typo, it takes seven!! And 2 of them are hashes. Without further adieu, let's dig in and see how this sucker works. First we'll start with our models:
+As I'm sure you have guessed, `collection_select` has to do with making a selction. More specifically, it is a Ruby on Rails form helper that allows you to display a collection of things in a dropdown and allow your user to, you guessed it, select one of them. As simple as the concept is, the implementation and usage can be rather unclear. The [official docs](https://api.rubyonrails.org/classes/ActionView/Helpers/FormOptionsHelper.html#method-i-collection_select) are, at least to me, a little bit cryptic. Much like one of Nostradamus' predictions, they only make perfect sense after you already know what's going on. I think one of the reasons(I would posit it is the primary reason) for confusion around the usage of `collection_select` is because it can take as many as 7 arguments. That's not a typo, it takes seven!! And 2 of them are hashes. Without further adieu, let's dig in and see how this sucker works. First we'll start with our models:
 ```
 Class Owner < ApplicationRecord
   has_many :direwolves # Yes, ActiveRecord is smart enough to figure out this pluralization in most cases.
@@ -28,7 +28,7 @@ Now let's get to the matter at hand. `collection_select` has the following gener
 ```
 collection_select(object, method, collection, value_method, text_method, options = {}, html_options = {})
 ``` 
-If this is the first time you're seeing this, I'd be willing to be that for most of you it's not exactly clear what this means. Here's the breakdown of what each of these are:
+If this is the first time you're seeing this, I'd be willing to bet that for most of you it's not exactly clear what this means. Here's the breakdown of what each of these are:
 
 `object`: This is the object that we will be associating with what is selected in the dropdown
 
